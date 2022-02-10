@@ -5,6 +5,8 @@ const contracts = [
   'EtherSwap',
   'ERC20Swap',
   'TestERC20',
+  'SwapLiquid',
+  'Swapcomplete'
 ];
 
 const tokenDecimals = BigNumber.from(10).pow(18);
