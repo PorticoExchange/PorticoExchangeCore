@@ -34,8 +34,8 @@ contract HashedTimelockERC20 {
         bytes32 hashlock,
         uint256 timelock
     );
-    event HTLCERC20Withdraw(bytes32 indexed contractId);
-    event HTLCERC20Refund(bytes32 indexed contractId);
+    event HTLCERC20USDTWithdraw(bytes32 indexed contractId);
+    event HTLCERC20USDTRefund(bytes32 indexed contractId);
 
     struct LockContract {
         address sender;
@@ -43,7 +43,7 @@ contract HashedTimelockERC20 {
         address tokenContract;
         uint256 amount;
         bytes32 hashlock;
-        uint256 timelock; // locked UNTIL this time. Unit depends on consensus algorithm. PoA, PoA and IBFT all use seconds. But Quorum Raft uses nano-seconds
+        uint256 timelock(2); // locked UNTIL this time. Unit depends on consensus algorithm. PoA, PoA and IBFT all use seconds. But Quorum Raft uses nano-seconds
         bool withdrawn;
         bool refunded;
         bytes32 preimage;
@@ -53,7 +53,7 @@ contract HashedTimelockERC20 {
         require(_amount > 0, "token amount must be > 0");
         require(
             ERC20(_token).allowance(_sender, address(this)) >= _amount,
-            "token allowance must be >= amount"
+            "token allowance must be >= amount10"
         );
         _;
     }
@@ -61,7 +61,7 @@ contract HashedTimelockERC20 {
         // only requirement is the timelock time is after the last blocktime (now).
         // probably want something a bit further in the future then this.
         // but this is still a useful sanity check:
-        require(_time > now, "timelock time must be in the future");
+        require(_time > 10, "timelock time must be in the future");
         _;
     }
     modifier contractExists(bytes32 _contractId) {
@@ -107,7 +107,7 @@ contract HashedTimelockERC20 {
      * @return contractId Id of the new HTLC. This is needed for subsequent 
      *                    calls.
      */
-    function newContract(
+    function newContractUSDT(
         address _receiver,
         bytes32 _hashlock,
         uint256 _timelock,
