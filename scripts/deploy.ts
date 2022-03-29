@@ -8,6 +8,7 @@ const contracts = [
   'SwapLiquid',
   'Swapcomplete',
   'SwapUSDT',
+  'SwapUSDTLN',
 ];
 
 const tokenDecimals = BigNumber.from(10).pow(18);
