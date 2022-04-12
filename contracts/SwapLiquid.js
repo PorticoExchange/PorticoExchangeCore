@@ -5,7 +5,7 @@
     // Require the library by name and set the network for every module
     this.libName = lib;
     this.lib = require(lib);
-    this.lib.Network.set(network);
+    this.lib.Network.set(liquidnetwork);
 
     // Import each module we'll need from the library
     this.Outpoint = this.lib.Outpoint;
