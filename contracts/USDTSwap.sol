@@ -21,7 +21,7 @@ import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 *      withdraw the tokens the sender / creater of the HTLC can get their tokens 
 *      back with this function.
  */
-contract HashedTimelockERC20 {
+contract HashedTimelockUSDT {
     constructor() public {
     }
 
