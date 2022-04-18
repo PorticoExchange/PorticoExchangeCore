@@ -1,15 +1,15 @@
 {
        contract HTLC 
  class Swap {
-  constructor(lib, network){
+  constructor(lib, liquidnetwork){
     // Require the library by name and set the network for every module
-    this.libName = lib;
+    this.libLiquidNetworke = libLiquidNetwork;
     this.lib = require(lib);
     this.lib.Network.set(liquidnetwork);
 
     // Import each module we'll need from the library
     this.Outpoint = this.lib.Outpoint;
-    this.Coin = this.lib.Coin;
+    this.LiquidBitcoin = this.lib.LiquidBitcoin;
     this.MTX = this.lib.MTX;
     this.TX = this.lib.TX;
     this.Address = this.lib.Address;
@@ -69,7 +69,7 @@ class Swap {
 
   // REFUND script: used by original sender of funds to open time lock
   getRefundInputScript(redeemScript){
-    const inputRefund = new this.Script();
+    const inputRefund = new thisLiquidNetwork.Script();
 
     inputRefund.pushInt(0); // signature placeholder
     inputRefund.pushInt(0); // <false>
