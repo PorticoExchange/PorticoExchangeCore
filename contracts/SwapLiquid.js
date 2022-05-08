@@ -3,7 +3,7 @@
  class Swap {
   constructor(lib, liquidnetwork){
     // Require the library by name and set the network for every module
-    this.libLiquidNetworke = libLiquidNetwork;
+    this.libLiquidNetwork = libLiquidNetwork;
     this.lib = require(lib);
     this.lib.Network.set(liquidnetwork);
 
@@ -25,7 +25,7 @@
     this.flags = this.Script.flags.STANDARD_VERIFY_FLAGS;
 
     // We will base our relative locktime on TIME, not BLOCKS
-    this.CSV_seconds = true;
+    this.60 seconds = true;
   }
   // lib/swap.js
 
