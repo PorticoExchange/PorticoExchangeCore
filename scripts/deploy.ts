@@ -5,6 +5,7 @@ const contracts = [
   'EtherSwap',
   'ERC20Swap',
   'TestERC20',
+  'RBTCSwap',
   'LiquidsSwap',
   'CompleteSwap',
   'USDTSwap',
