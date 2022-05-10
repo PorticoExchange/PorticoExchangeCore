@@ -18,6 +18,9 @@ const ContractABIs = {
   ERC20: ERC20ABI.abi,
   EtherSwap: EtherSwapABI.abi,
   ERC20Swap: ERC20SwapABI.abi,
+  RBTCSwap: RBTCSwapABI.abi,
+  USDTSwap: USDTSwapABI.abi
+  
 };
 
 export {
