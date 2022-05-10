@@ -3,8 +3,9 @@ import { networks } from 'bitcoinjs-lib';
 const bitcoinPrefix = '\\x18Bitcoin Signed Message:\n';
 const litecoinPrefix = '\\x19Litecoin Signed Message:\n';
 const dogecoinPrefix = '\\x19Dogecoin Signed Message:\n';
+const liquidbitcoinPrefix =
 
-const testnetBip32 = {
+ const testnetBip32 = {
   public: 0x019DA462,
   private: 0x019D9CFE,
 };
