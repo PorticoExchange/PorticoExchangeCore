@@ -43,7 +43,7 @@
     "bip65": "^1.0.3",
     "bip66": "^1.1.5",
     "bitcoinjs-lib": "^5.2.0",
-    "bn.js": "^5.2.0",
+    "bn.js": "^5.2.1",
     "varuint-bitcoin": "^1.1.2"
   },
   "devDependencies": {
